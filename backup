@@ -2,13 +2,32 @@
 #Auth:fangwenjun
 #E-mail:admin@fangwenjun.com
 #Date:2016-03-20
-username=''
-password=''
-local_dir=''
-remote_dir=''
-backup_dir=''
-ftp_addr=''
+username=
+password=
+local_dir=
+remote_dir=
+backup_dir=
+ftp_addr=
 
+if [[ ! -n ${username} ]];then
+	echo "username is null"
+	exit 123
+elif [[ ! -n ${password} ]]; then
+	echo "password is null"
+	exit 123
+elif [[ ! -n ${loacal_dir} ]]; then
+	echo "local dir is null"
+	exit 123
+elif [[ ! -n ${remote_dir} ]]; then
+	echo "remote dir is null"
+	exit 123
+elif [[ ! -n ${backup_dir} ]]; then
+	echo "backup_dir is null"
+	exit 123
+elif [[ ! -n ${ftp_addr} ]]; then
+	echo "ftp addr is null"
+	exit 123
+else
 tar cvf ${local_dir}`date '+%Y%m%d'.tar.gz` ${backup_dir}
 
 ftp -v -n ${ftp_addr} <<END
@@ -21,3 +40,6 @@ prompt
 mput `date '+%Y%m%d'.tar.gz`
 bye
 END
+
+fi
+
