@@ -2,11 +2,11 @@
 #Auth:fangwenjun
 #E-mail:admin@fangwenjun.com
 #Date:2016-03-20
-username='admin/file201503'
-password='513341aaqq@#'
-local_dir='/root/back'
-remote_dir='/backup/'
-backup_dir='/www/fangwenjun.com'
+username=''
+password=''
+local_dir=''
+remote_dir=''
+backup_dir=''
 ftp_addr=''
 
 tar cvf ${local_dir}`date '+%Y%m%d'.tar.gz` ${backup_dir}
