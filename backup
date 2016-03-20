@@ -15,7 +15,7 @@ if [[ ! -n ${username} ]];then
 elif [[ ! -n ${password} ]]; then
 	echo "password is null"
 	exit 123
-elif [[ ! -n ${loacal_dir} ]]; then
+elif [[ ! -n ${local_dir} ]]; then
 	echo "local dir is null"
 	exit 123
 elif [[ ! -n ${remote_dir} ]]; then
