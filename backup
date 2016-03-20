@@ -2,11 +2,12 @@
 #Auth:fangwenjun
 #E-mail:admin@fangwenjun.com
 #Date:2016-03-20
-username=''
-password=''
-local_dir=''
-remote_dir=''
-backup_dir=''
+username='admin/file201503'
+password='513341aaqq@#'
+local_dir='/root/back'
+remote_dir='/backup/'
+backup_dir='/www/fangwenjun.com'
+
 tar cvf ${local_dir}`date '+%Y%m%d'.tar.gz` ${backup_dir}
 
 ftp -v -n v0.ftp.upyun.com <<END
