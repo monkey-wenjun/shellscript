@@ -1,0 +1,21 @@
+#!/bin/bash
+#Auth:fangwenjun
+#E-mail:admin@fangwenjun.com
+#Date:2016-03-20
+username=''
+password=''
+local_dir=''
+remote_dir=''
+backup_dir=''
+tar cvf ${local_dir}`date '+%Y%m%d'.tar.gz` ${backup_dir}
+
+ftp -v -n v0.ftp.upyun.com <<END
+user ${username} ${password}
+binary
+hash
+cd ${remote_dir}
+lcd ${local_dir}
+prompt
+mput `date '+%Y%m%d'.tar.gz`
+bye
+END
