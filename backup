@@ -7,10 +7,11 @@ password='513341aaqq@#'
 local_dir='/root/back'
 remote_dir='/backup/'
 backup_dir='/www/fangwenjun.com'
+ftp_addr=''
 
 tar cvf ${local_dir}`date '+%Y%m%d'.tar.gz` ${backup_dir}
 
-ftp -v -n v0.ftp.upyun.com <<END
+ftp -v -n ${ftp_addr} <<END
 user ${username} ${password}
 binary
 hash
